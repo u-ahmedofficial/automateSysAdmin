@@ -10,14 +10,23 @@ A Collection of scripts to automate the task of System Administrator in a Networ
 * Paste at the end of main.cf:
 
 `Enable SASL Authentication`
+
 `smtp_sasl_auth_enable=yes`
+
 `#disallow methods anonymous authentication`
+
 `smtp_sasl_security_options=noanonymous`
+
 `#Location of Sasl_passwd`
+
 `smtp_sasl_password_maps=hash:/etc/postfix/sasl/sasl_passwd`
+
 `#Enable StartTLS Encryption`
+
 `smtp_tls_security_level=encrypt`
+
 `#location of CA certificates`
+
 `smtp_tls_CAfile=/etc/ssl/certs/ca-certificates.crt`
 
 
