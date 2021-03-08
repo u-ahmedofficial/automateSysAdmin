@@ -17,7 +17,7 @@ EXCLUDE_LIST="/auto/ripper"
 #
 # Function to inform the admin about the disk space, through email.
 # This reads the STDIN input from the functional call, compare it with threshhold and send the report to admin if it exceeds.
-function reportAdmin() {
+reportAdmin() {
 while read output;
 do
   usep=$(echo $output | awk '{ print $1}' | cut -d'%' -f1)
