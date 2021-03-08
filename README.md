@@ -42,6 +42,8 @@ A Collection of scripts to automate the task of System Administrator in a Networ
 * For Multiple Emails Syntax:
 `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com ahmed@gmail.com`
 * For CC Syntax: `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com ahmed@gmail.com -c khan@gmail.com` 
+* For Sending File: `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com -a file.txt` 
+* For Sending File: `echo "TEST EMAIL BODY" | mutt -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com -a file.txt` 
 
 ### USAGE 
 * For disk space notify Bot:
