@@ -1,7 +1,7 @@
 # automateSysAdmin
 A Collection of scripts to automate the task of System Administrator in a Network.
 
-##### For Mail Server Setup in Linux Follow
+### For Mail Server Setup in Linux Follow
 * Install the postfix, mailutils `sudo apt install mailutils && sudo apt install postfix`
 * When it asks for domain (internet), insert any domain of your desire
 * After installation edit: `sudo vi /etc/postfix/main.cf`
@@ -25,14 +25,14 @@ smtp_tls_CAfile=/etc/ssl/certs/ca-certificates.crt
 * Map the Password: `sudo postmap /etc/postfix/sasl/sasl_passwd`
 * Allow from Gmail sign-in Security, `Allow Less secure Apps`
 
-##### USAGE For Mail Server
+### USAGE For Mail Server
 * For Single Email Syntax:
 `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com`
 * For Multiple Emails Syntax:
 `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com ahmed@gmail.com`
 * For CC Syntax: `echo "TEST EMAIL BODY" | mail -s "TEST EMAIL SUBJECT SMTP" umair@gmail.com ahmed@gmail.com -c khan@gmail.com` 
 
-##### USAGE 
+### USAGE 
 * For disk space notify Bot:
 `./diskspaceNotifyBot.sh <Email>`
 * If you want to send bulk or cc use double quotes
