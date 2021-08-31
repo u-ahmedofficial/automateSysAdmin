@@ -1,0 +1,23 @@
+input {
+    jdbc {
+        clean_run => true
+        jdbc_driver_library => "/root/jdbc.jar"
+        jdbc_driver_class => "com.mysql.jdbc.Driver"
+        jdbc_connection_string => "jdbc:mysql://localhost:3306/jobschema"
+        jdbc_user => "root"
+        jdbc_pass => ""
+        schedule => "* * * * *"
+        statement => "select jobid, jobname, executiontime, jobstatus from jobdata where jobid > :sql_last_value"
+        use_column_value => true
+        tracking_column => "jobid"
+    }
+}
+output{
+    elasticsearch {
+        hosts => ["localhost:9200"]
+        index => "jobdata"
+    }
+    stdout {
+        codec => rubydebug
+    }
+}
